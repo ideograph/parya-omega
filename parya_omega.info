@@ -27,15 +27,20 @@ regions[header_second] = Header Second
 
 regions[preface_first] = Preface First
 regions[preface_second] = Preface Second
-regions[preface_third] = Preface Third
+;regions[preface_third] = Preface Third
 
 regions[postscript_first] = Postscript First
 regions[postscript_second] = Postscript Second
 regions[postscript_third] = Postscript Third
-regions[postscript_fourth] = Postscript Fourth
+;regions[postscript_fourth] = Postscript Fourth
 
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
+
+regions[postfooter_first] = Post-Footer First
+regions[postfooter_second] = Post-Footer Second
+regions[postfooter_third] = Post-Footer Third
+regions[postfooter_fourth] = Post-Footer Fourth
 
 ; ZONES
 
@@ -47,6 +52,7 @@ zones[preface] = Preface
 zones[content] = Content
 zones[postscript] = Postscript
 zones[footer] = Footer
+zones[postfooter] = Post-footer
 
 ; OPTIONAL STYLESHEETS
 
@@ -59,8 +65,6 @@ css[global.css][options][weight] = 10
 
 stylesheets[all][] = superfish-vertical.css
 
-
-; THEME SETTINGS (DEFAULTS)
 
 ; THEME SETTINGS (DEFAULTS)
 
