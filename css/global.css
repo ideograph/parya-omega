@@ -1,0 +1,86 @@
+/* main styles for parya.org */
+
+
+
+#page { background: #ccc;}
+
+#section-header {}
+#zone-branding-wrapper { padding: 20px 0 10px;}
+#zone-menu { background:#fff; }
+
+#section-content {}
+#zone-content {background:#fff;}
+#breadcrumb { margin: 10px 10px 20px;}
+.sf-menu  a, .sf-menu a:link, .sf-menu a:visited {
+  text-decoration:none;
+  color:#333;
+}
+
+.zone-wrapper { margin: 0 auto;}
+
+.block ul {}
+
+aside .block {
+  margin-bottom:20px;
+  padding:25px 20px;
+  border: 1px solid #D6D6D6;
+}
+aside .block h2 {
+  border-bottom: 1px solid #D6D6D6;
+  font-size:1.5em;
+  line-height: 1.2em;
+  font-weight:normal;
+  margin: 0 0 1em;
+  padding-bottom:5px;
+  text-shadow:#FFFFFF 0 1px 0;
+}
+.block ul {
+  margin-bottom:10px;
+}
+.block-locale ul li, 
+.block-switch-user ul li {
+ list-style:none;
+}
+
+/*
+.block-switch-user .form-item-username,
+.block-switch-user #edit-submit { display: inline-block; float: left;}
+.block-switch-user #edit-submit { margin:10px 10px 10px 20px; }
+*/
+
+#block-civicrm-1 h2, #block-civicrm-3 h2 {display:none;}
+
+
+#block-views-frontpage-slidshow-block h2.title {
+  margin: 0;
+}
+
+#zone-user .region-inner  { margin: 10px 0 0; }
+#zone-user ul.menu  { text-align:right; }
+#zone-user ul.menu li { padding:none; }
+#zone-user ul.menu li.last { margin-right: 0; }
+#zone-user .form-item-search-block-form .form-text { width:140px; }
+#zone-user #block-search-form {float:right;}
+
+#superfish-1 li.sf-depth-1 a.sf-depth-1 {
+  text-transform:uppercase;
+  font-size:1.3em;
+}
+
+
+
+#section-footer {
+  background: #333;
+  padding: 20px 0 50px;
+  color:#fff;
+  min-height:200px;
+}
+#section-footer a, #section-footer a:link { color:#fff; }
+
+/* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
+#section-footer ul.menu li,
+#zone-user ul.menu li {
+  display:inline;
+  margin-right:0.5em;
+}
+#zone-footer {}
