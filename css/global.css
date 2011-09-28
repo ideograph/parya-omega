@@ -2,20 +2,24 @@
 
 
 
-#page { background: #ccc;}
+#page { background: #aaa;}
 
 #section-header {}
-#zone-branding-wrapper { padding: 20px 0 10px;}
+#zone-branding-wrapper { padding: 30px 0 15px;}
 
-#zone-menu, #zone-preface,
-#zone-content, #zone-postscript {
+#zone-menu, 
+#zone-preface,
+#zone-content, 
+#zone-postscript {
   /* comment this property out to see the grid properly*/
-/*  background:#fff; */
+  background:#fff; 
 }
 
-#zone-preface { padding:20px 0; }
-#zone-postscript { padding:20px 0; }
-.zone-wrapper { margin: 0 auto;}
+#zone-preface, 
+#zone-content, 
+#zone-postscript { 
+  padding:20px 0; 
+}
 
 
 
@@ -40,11 +44,16 @@
   font-size:1.2em;
 }
 
+div.breadcrumb,
+div.region-content-inner {
+  margin: 0 10px;
+}
 
 
 aside .block {
   margin-bottom:20px;
   border: 1px solid #D6D6D6;
+  background:#fefefe;
 }
 aside .block .block-inner {
   padding:25px 20px;
@@ -63,7 +72,7 @@ aside .block h2 {
 }
 .block-locale ul li, 
 .block-switch-user ul li {
- list-style:none;
+  list-style:none;
 }
 
 /*
@@ -71,7 +80,6 @@ aside .block h2 {
 .block-switch-user #edit-submit { display: inline-block; float: left;}
 .block-switch-user #edit-submit { margin:10px 10px 10px 20px; }
 */
-
 #block-civicrm-1 h2, #block-civicrm-3 h2 {display:none;}
 
 
@@ -80,6 +88,15 @@ aside .block h2 {
 }
 
 
+/* temp - ad blocks */
+aside #block-block-2.block {
+  padding:0px;
+  border: 0px solid #D6D6D6;
+  background:none;
+}
+#block-block-6 { float:right; }
+.branding-data { float:left; padding-top:20px; }
+.logo-img { margin-right:0; }
 
 /* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
 #section-footer ul.menu li,
@@ -105,12 +122,13 @@ aside .block h2 {
 
 
 
-/* BLOCKS */
+/* VIEWS */
 
-aside #block-block-2.block {
-  margin-bottom:20px;
-  padding:0px;
-  border: 0px solid #D6D6D6;
-  
+.node-list article {
+  margin-bottom: 20px;
+  border-bottom:1px dotted #ccc;
 }
 
+article .field-name-field-image {
+  margin: 10px 0 20px;
+}

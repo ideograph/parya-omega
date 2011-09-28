@@ -1,1 +1,11 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+/*
+not sure why this isn't loading…
+
+aside#region-sidebar-second { width:355px; }
+#region-sidebar-second.grid-6 { width:355px; }
+
+body { background:red !important; }
+
+*/
