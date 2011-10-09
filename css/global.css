@@ -1,13 +1,14 @@
 /* main styles for parya.org */
 
 
-
+/* ZONES */
 #page { background: #aaa;}
 
 #section-header {}
 #zone-branding-wrapper { padding: 30px 0 15px;}
 
 #zone-menu, 
+#zone-header,
 #zone-preface,
 #zone-content, 
 #zone-postscript {
@@ -21,6 +22,14 @@
   padding:20px 0; 
 }
 
+
+/* BRANDING */
+.logo-img { 
+  margin-right:0;
+  padding: 20px 0;
+}
+.grid-3.region-branding { margin:0; }
+.grid-9.region-branding-ad { margin-left:0; }
 
 
 
@@ -49,7 +58,25 @@ div.region-content-inner {
   margin: 0 10px;
 }
 
+/* HEADER */
+.front #zone-header .region {
+  padding: 10px 20px;
+}
 
+
+/* PREFACE */
+
+.front #zone-preface .block-inner {
+  padding: 20px;
+  background: #eaeaea;
+  height: 50px;
+}
+
+.front #zone-preface { 	}
+
+
+
+/* BLOCKS*/
 aside .block {
   margin-bottom:20px;
   border: 1px solid #D6D6D6;
@@ -70,9 +97,32 @@ aside .block h2 {
 .block ul {
   margin-bottom:10px;
 }
+
+/* quicktabs */
+.block.block-quicktabs,
+.block.block-quicktabs .block { border:none; }
+.block.block-quicktabs .block { margin: 10px 0; }
+.block.block-quicktabs .block-inner { padding: 20px 0 0; }
+
 .block-locale ul li, 
 .block-switch-user ul li {
   list-style:none;
+}
+
+
+.block-views .item h3, .block-views .item h4 {
+  margin:0;
+}
+
+.block-views .item.event .image,
+.block-views .item.news .image {
+  float:left;
+  margin:10px;
+  margin-left:0;
+}
+.block-views .item.event h3.title,
+.block-views .item.event p.teaser {
+  margin-left:65px;
 }
 
 /*
@@ -80,12 +130,111 @@ aside .block h2 {
 .block-switch-user #edit-submit { display: inline-block; float: left;}
 .block-switch-user #edit-submit { margin:10px 10px 10px 20px; }
 */
-#block-civicrm-1 h2, #block-civicrm-3 h2 {display:none;}
+#block-civicrm-1 h2, #block-civicrm-3 h2 { display:none; }
 
 
-#block-views-frontpage-slidshow-block h2.title {
-  margin: 0;
+/* frontpage slideshow */
+/*.front .views_slideshow_cycle_main*/
+.view-frontpage-slidshow {
+  width:900px;
+  height: 400px;
 }
+.front #block-views-frontpage-slidshow-block .description { 
+  float: left;
+  position:relative;
+  left:20px;
+  top:-80px;
+  color:#fff;
+ } 
+/* we can't flow the description, overflow of the container cuts it off */
+.front #block-views-frontpage-slidshow-block h2.title {
+  margin: 0;
+  text-shadow:1px 1px 5px #333;
+}
+.front #block-views-frontpage-slidshow-block p {
+  font-size: 1.4em;
+  text-shadow:1px 1px 3px #111;
+  font-weight:bold;
+  font-style:italic;
+  font-family:Georgia, 'Times New Roman', serif;
+}
+.front #block-views-recent-headlines-block h2 {
+  font-size:90%;
+  text-transform: uppercase;
+  margin-bottom:5px;
+}
+
+.views-slideshow-controls-bottom {
+  /*margin-top:-80px;*/
+ 	position: absolute;
+	top: 0;
+	left: 0;
+	height: 370px; /* 100% */
+	width: 900px; /* 100% */
+	z-index: 10;
+	filter:alpha(opacity:80); /* Specify opacity for IE */
+
+}
+
+.views_slideshow_controls_text_pause { display: none; }
+
+.previous, .next {
+  position: absolute;
+  vertical-align:middle;
+  cursor:pointer;
+  display:block;
+  height:100%;
+  width:20%;
+	background: transparent url(../images/ui/c.gif) no-repeat; /* Trick IE into showing hover */
+}
+.previous-inner, .next-inner {
+  position: absolute;
+  height:100%;
+  width:100%;
+	background: transparent url(../images/ui/c.gif) no-repeat; /* Trick IE into showing hover */
+}
+
+.previous span, .next span { display: none; }
+
+.previous { left: 0; float: left; }
+.next { right: 0; float: right; }
+
+/* background image for IE */
+.previous:hover, .previous:visited:hover { 
+	background: url(../images/ui/prev_minus.gif) 10% 50% no-repeat;
+}
+.next:hover, .next:visited:hover { 
+	background: url(../images/ui/next_plus.gif) 90% 50% no-repeat;
+}
+/* background image for compliant browsers */
+.previous:hover, .previous:visited:hover { 
+	background: url(../images/ui/prev_chevron.png) 10% 50% no-repeat;
+}
+.next:hover, .next:visited:hover { 
+  background: url(../images/ui/next_chevron.png) 90% 50% no-repeat;
+  /*background-color: rgba(255,255,255,0.2);*/
+}
+
+.previous-inner:hover, .previous-inner:visited:hover {
+	background: -moz-linear-gradient(left, rgba(255,255,255,0.2) 1%, rgba(255,255,255,0.2) 51%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%,rgba(255,255,255,0.2)), color-stop(51%,rgba(255,255,255,0.2)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0.2) 1%,rgba(255,255,255,0.2) 51%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,0.2) 1%,rgba(255,255,255,0.2) 51%,rgba(255,255,255,0) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,0.2) 1%,rgba(255,255,255,0.2) 51%,rgba(255,255,255,0) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+	background: linear-gradient(left, rgba(255,255,255,0.2) 1%,rgba(255,255,255,0.2) 51%,rgba(255,255,255,0) 100%); /* W3C */
+}
+.next-inner:hover, .next-inner:visited:hover {
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 32%, rgba(255,255,255,0.3) 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(32%,rgba(255,255,255,0.3)), color-stop(99%,rgba(255,255,255,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 32%,rgba(255,255,255,0.3) 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 32%,rgba(255,255,255,0.3) 99%); /* Opera11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 32%,rgba(255,255,255,0.3) 99%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#4dffffff',GradientType=1 ); /* IE6-9 */
+	background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 32%,rgba(255,255,255,0.3) 99%); /* W3C */
+}
+
+
 
 
 /* temp - ad blocks */
@@ -94,9 +243,14 @@ aside #block-block-2.block {
   border: 0px solid #D6D6D6;
   background:none;
 }
-#block-block-6 { float:right; }
-.branding-data { float:left; padding-top:20px; }
-.logo-img { margin-right:0; }
+.block.ad {
+  position:relative;
+  bottom:0;
+}
+
+
+
+/* FOOTER */
 
 /* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
 #section-footer ul.menu li,
@@ -122,7 +276,7 @@ aside #block-block-2.block {
 
 
 
-/* VIEWS */
+/* VIEWS lists */
 
 .node-list article {
   margin-bottom: 20px;
@@ -131,4 +285,15 @@ aside #block-block-2.block {
 
 article .field-name-field-image {
   margin: 10px 0 20px;
+}
+
+
+
+.img-left{
+  float: left;
+  margin: 10px 10px 0 10px;
+}
+.img-right {
+  float: right;
+  margin: 10px 0 10px 10px;
 }

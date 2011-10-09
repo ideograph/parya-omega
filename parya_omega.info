@@ -17,6 +17,7 @@ regions[user_first] = User Bar First
 regions[user_second] = User Bar Second
 
 regions[branding] = Branding
+regions[branding_ad] = Branding Ad
 regions[menu] = Menu
 
 regions[sidebar_first] = Sidebar First
@@ -57,7 +58,7 @@ zones[postfooter] = Post-footer
 ; OPTIONAL STYLESHEETS
 
 css[global.css][name] = Your custom global styles
-css[global.css][description] = This file holds all the globally active custom CSS of your theme.
+css[global.css][description] = This file holds all the globally active custom CSS of our theme.
 css[global.css][options][weight] = 10
 
 
