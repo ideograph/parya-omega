@@ -1,0 +1,29 @@
+/**
+ * @file
+ * WYSIWYG Styling
+ *
+ * Styles loaded specifically when the wysiwyg editor loads.
+ * We need to override some specifics, and include some layout-like elements
+ * without loading up the whole stylesheet.
+ */
+ 
+ 
+
+body {  
+  /* reset font size and line height */
+  /*font-size: 0.75em; /* 16px x .75 = 12px */
+  /*line-height: 1.333em; /* 12px x 1.333 = 16px */
+
+}
+
+
+ /*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -7,6 +7,18 @@
 .grid-9.region-branding-ad { margin-right:0; }
 
 
+
+/* standardize list item indentation */
+.content ul, .content ol {
+  padding-right: 2em; /* RTL */
+}
+.content dd {
+  margin: 0 2em 0 0;/* RTL */
+}
+
+
+
+
 /* TEMP ads*/
 
 /* .block-6 {float:left;} */

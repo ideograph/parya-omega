@@ -24,7 +24,7 @@ regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
 
 regions[header_first] = Header First
-regions[header_second] = Header Second
+;regions[header_second] = Header Second
 
 regions[preface_first] = Preface First
 regions[preface_second] = Preface Second
@@ -34,6 +34,10 @@ regions[postscript_first] = Postscript First
 regions[postscript_second] = Postscript Second
 regions[postscript_third] = Postscript Third
 ;regions[postscript_fourth] = Postscript Fourth
+
+regions[secondpostscript_first] = Second Postscript First
+regions[secondpostscript_second] = Second Postscript Second
+regions[secondpostscript_third] = Second Postscript Third
 
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
@@ -52,14 +56,21 @@ zones[header] = Header
 zones[preface] = Preface
 zones[content] = Content
 zones[postscript] = Postscript
+zones[secondpostscript] = Second Postscript
 zones[footer] = Footer
 zones[postfooter] = Post-footer
 
 ; OPTIONAL STYLESHEETS
 
-css[global.css][name] = Your custom global styles
+css[global.css][name] = Parya's custom global styles
 css[global.css][description] = This file holds all the globally active custom CSS of our theme.
 css[global.css][options][weight] = 10
+
+
+css[fonts.css][name] = font styles
+css[fonts.css][description] = font styles
+css[fonts.css][options][weight] = 10
+
 
 
 ; EXCLUDE some sheets from contrib modules. [AM]

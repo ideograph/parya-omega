@@ -1,21 +1,138 @@
 /* main styles for parya.org */
 
 
-/* ZONES */
+/* @group HTML elements 
+*********************************************/
+
+/* @group Lists */
+ul ul, ul ol,
+ol ol, ol ul,
+.block ul ul, .block ul ol,
+.block ol ol, .block ol ul,
+.item-list ul ul, .item-list ul ol,
+.item-list ol ol, .item-list ol ul {
+  margin: 0;
+}
+
+li { margin: 0; padding: 0; }
+
+.item-list ul li /* Drupal override */ {
+  margin: 0;
+  padding: 0;
+  list-style: inherit;
+}
+
+
+ul          { list-style-type: square; }
+ul ul       { list-style-type: circle; }
+ul ul ul    { list-style-type: square; }
+ul ul ul ul { list-style-type: circle; }
+ol          { list-style-type: decimal; }
+ol ol       { list-style-type: lower-alpha; }
+ol ol ol    { list-style-type: decimal; }
+
+
+/* standardize list item indentation */
+.content ul, .content ol {
+  margin-left: 0;
+  padding-left: 2em; /* LTR */
+}
+
+.content dt { margin: 0; padding: 0; }
+
+.content dd {
+  margin: 0 0 0 2em; /* LTR */
+  padding: 0;
+}
+/* @end Lists */
+
+
+
+
+/* @group Tables */
+/*
+ * Drupal provides table styling which is only useful for its admin section
+ * forms, so we override this default CSS. (We set it back in forms.css.)
+ */
+table {
+  width: 100%;
+  margin: 10px 0 10px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* width: 100%; */ /* Prevent cramped-looking tables */
+}
+tbody {
+  border-top: none;
+}
+
+table th, form table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0.143em 0.357em; /*equivalent to 2px 5px*/
+}
+table tr, table tr.odd, table tr.even {
+  border: 0 none;
+  padding: 0;
+}
+table th,
+thead th,
+tbody th {
+  text-align: left; /* LTR */
+  text-transform: uppercase;
+  background: #e1e2dc;
+  font-weight: normal;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bebfb9;
+  /*border-bottom: none;*/
+  padding: 0.214em 0.714em; /*equivalent to 3px 10px*/
+}
+
+table th a {
+  display: block;
+  position: relative;
+}
+table th.active img {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+table td.active {
+  background: #e9e9dd;
+}
+table tr.odd td.active {
+  background: #f3f4ee;
+}
+table tr.selected td.active,
+table tr.selected td {
+  background: #ffc;
+  border-color: #eeb;
+}
+tr.odd {
+  background: #fff;
+}
+
+
+/* @end Tables*/
+
+
+/* @end HTML elements */
+
+
+/* @group ZONES
+*********************************************/
+
+
 #page { background: #aaa;}
-
-#section-header {}
-#zone-branding-wrapper { padding: 30px 0 15px;}
-
 #zone-menu, 
 #zone-header,
 #zone-preface,
 #zone-content, 
-#zone-postscript {
-  /* comment this property out to see the grid properly*/
-  background:#fff; 
+#zone-postscript,
+#zone-secondpostscript {
+  background:#fff;  /* comment this property out to see the grid properly*/
 }
-
 #zone-preface, 
 #zone-content, 
 #zone-postscript { 
@@ -23,26 +140,41 @@
 }
 
 
-/* BRANDING */
+
+/* @group --header */
+#section-header {}
+
+
+/* @group ----branding */
+#zone-branding-wrapper { padding: 30px 0 15px;}
 .logo-img { 
   margin-right:0;
   padding: 20px 0;
 }
 .grid-3.region-branding { margin:0; }
 .grid-9.region-branding-ad { margin-left:0; }
+/* @end ----branding */
 
 
 
-/* NAVIGATION */
-
+/* @group ----navigation */
 #zone-user .region-inner  { margin: 10px 0 0; }
-#zone-user ul.menu  { text-align:right; }
-#zone-user ul.menu li { padding:none; }
-#zone-user ul.menu li.last { margin-right: 0; }
-#zone-user .form-item-search-block-form .form-text { width:140px; }
-#zone-user #block-search-form {float:right;}
+.block-user-menu {}
+.block-user-menu ul.menu  { text-align:right; }
+.block-user-menu ul.menu li {
+  padding:none; 
+  list-style:none;
+  display:inline;
+}
+.block-user-menu ul.menu li.last { margin-right: 0; }
+.block-search .form-item-search-block-form .form-text { width:140px; }
+#block-search-form { float:right; }
 
 #breadcrumb { margin: 10px 10px 20px;}
+div.breadcrumb,
+div.region-content-inner {
+  margin: 0 10px;
+}
 
 .sf-menu  a, .sf-menu a:link, .sf-menu a:visited {
   text-decoration:none;
@@ -52,31 +184,88 @@
   text-transform:uppercase;
   font-size:1.2em;
 }
-
-div.breadcrumb,
-div.region-content-inner {
-  margin: 0 10px;
-}
-
-/* HEADER */
-.front #zone-header .region {
-  padding: 10px 20px;
-}
+/* @end ----navigation */
 
 
-/* PREFACE */
+/* @end --header */
 
+
+
+
+
+
+/* @group --preface */
 .front #zone-preface .block-inner {
   padding: 20px;
   background: #eaeaea;
   height: 50px;
 }
-
 .front #zone-preface { 	}
+/* @end --preface*/
+
+/* @group --content */
+
+.node .field-slideshow-wrapper {
+  margin-bottom: 20px;
+}
+.node .field-slideshow-pager {
+  margin: 10px 0;
+}
+
+/* @end --preface */
+
+
+/* @group --postscript */
+/* homepage blocks */
+#zone-postscript .region {
+  border: 1px solid #ccc;
+  margin: 0 9px;
+}
+#zone-postscript .block { padding: 10px; }
+#zone-postscript .block .content { font-size:90%; }
+/* @end --postscript */
 
 
 
-/* BLOCKS*/
+
+#zone-secondpostscript{  padding: 0 0 20px; }
+
+
+/* @group --footer */
+/* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
+#section-footer ul.menu li,
+#section-footer ul.language-switcher-locale-url li,
+#zone-user ul.menu li {
+  display:inline;
+  margin-right:0.5em;
+}
+
+#section-footer {
+  background: #333;
+  padding: 20px 0 50px;
+  color:#fff;
+  min-height:200px;
+}
+#section-footer a, #section-footer a:link { color:#fff; }
+
+#block-menu-menu-footer-links ul { text-align:right;}
+
+#section-footer #block-locale-language { }
+
+#block-block-15 img { float: right; }
+/* @end --footer */
+
+
+
+/* @end ZONES */
+
+
+
+
+
+/* @group BLOCKS
+*********************************************/
+
 aside .block {
   margin-bottom:20px;
   border: 1px solid #D6D6D6;
@@ -98,6 +287,8 @@ aside .block h2 {
   margin-bottom:10px;
 }
 
+
+
 /* quicktabs */
 .block.block-quicktabs,
 .block.block-quicktabs .block { border:none; }
@@ -110,7 +301,9 @@ aside .block h2 {
 }
 
 
-.block-views .item h3, .block-views .item h4 {
+
+.block-views .item h3, 
+.block-views .item h4 {
   margin:0;
 }
 
@@ -131,13 +324,18 @@ aside .block h2 {
 .block-switch-user #edit-submit { margin:10px 10px 10px 20px; }
 */
 #block-civicrm-1 h2, #block-civicrm-3 h2 { display:none; }
+/* @end BLOCKS */
 
 
-/* frontpage slideshow */
-/*.front .views_slideshow_cycle_main*/
+
+
+
+
+/* @group frontpage slideshow */
+
 .view-frontpage-slidshow {
   width:900px;
-  height: 400px;
+  margin: 0 auto;
 }
 .front #block-views-frontpage-slidshow-block .description { 
   float: left;
@@ -162,6 +360,10 @@ aside .block h2 {
   font-size:90%;
   text-transform: uppercase;
   margin-bottom:5px;
+  display:inline-block;
+}
+.front #block-views-recent-headlines-block .content {
+
 }
 
 .views-slideshow-controls-bottom {
@@ -233,6 +435,13 @@ aside .block h2 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#4dffffff',GradientType=1 ); /* IE6-9 */
 	background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 32%,rgba(255,255,255,0.3) 99%); /* W3C */
 }
+/* @end frontpage slideshow */
+
+
+
+
+
+
 
 
 
@@ -250,29 +459,7 @@ aside #block-block-2.block {
 
 
 
-/* FOOTER */
 
-/* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
-#section-footer ul.menu li,
-#section-footer ul.language-switcher-locale-url li,
-#zone-user ul.menu li {
-  display:inline;
-  margin-right:0.5em;
-}
-
-#section-footer {
-  background: #333;
-  padding: 20px 0 50px;
-  color:#fff;
-  min-height:200px;
-}
-#section-footer a, #section-footer a:link { color:#fff; }
-
-#block-menu-menu-footer-links ul { text-align:right;}
-
-#section-footer #block-locale-language {
-
-}
 
 
 
@@ -289,11 +476,28 @@ article .field-name-field-image {
 
 
 
-.img-left{
-  float: left;
-  margin: 10px 10px 0 10px;
+
+
+/* */
+
+.node div.img-left {
+  float:left;
+  margin: 5px 15px 15px 0;
 }
-.img-right {
-  float: right;
-  margin: 10px 0 10px 10px;
+.node div.img-right{
+  float:right;
+  margin: 5px 0 15px 15px;
+}
+
+.node div.img-left a,
+.node div.img-right a {
+  display:block;
+  padding:5px;
+  border:1px solid #ccc;
+  line-height:1em;
+}
+.node div.img-left a:hover,
+.node div.img-right a:hover {
+  background:#CCEE00;
+  border:1px solid #ccc;
 }
