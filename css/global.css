@@ -162,7 +162,7 @@ tr.odd {
 .block-user-menu {}
 .block-user-menu ul.menu  { text-align:right; }
 .block-user-menu ul.menu li {
-  padding:none; 
+  padding:0; 
   list-style:none;
   display:inline;
 }
@@ -375,7 +375,6 @@ aside .block h2 {
 	width: 900px; /* 100% */
 	z-index: 10;
 	filter:alpha(opacity:80); /* Specify opacity for IE */
-
 }
 
 .views_slideshow_controls_text_pause { display: none; }
@@ -476,6 +475,12 @@ article .field-name-field-image {
 
 
 
+
+/* overrides */
+
+body.admin-menu div#admin-toolbar.vertical {
+   margin-top:30px;
+}
 
 
 /* */
