@@ -146,13 +146,25 @@ tr.odd {
 
 
 /* @group ----branding */
-#zone-branding-wrapper { padding: 30px 0 15px;}
+#zone-branding-wrapper { padding: 10px 0 5px;}
 .logo-img { 
   margin-right:0;
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 .grid-3.region-branding { margin:0; }
 .grid-9.region-branding-ad { margin-left:0; }
+
+#region-user-second {
+  margin-top:30px;
+}
+.block-user-menu li a {
+  color: #295b86;
+  text-decoration:none;
+  text-shadow: 0 1px 1px #bbb;
+}
+.block-user-menu li a:hover {
+  border-bottom: 1px solid #295b86;
+}
 /* @end ----branding */
 
 
@@ -166,7 +178,8 @@ tr.odd {
   list-style:none;
   display:inline;
 }
-.block-user-menu ul.menu li.last { margin-right: 0; }
+.block-user-menu ul.menu li { margin: 0 1em 0 0;}
+.block-user-menu ul.menu li.last { margin: 0; }
 .block-search .form-item-search-block-form .form-text { width:140px; }
 #block-search-form { float:right; }
 
@@ -211,6 +224,9 @@ div.region-content-inner {
 .node .field-slideshow-pager {
   margin: 10px 0;
 }
+#zone-content {
+	/*box-shadow:0 12px 13px #000000;*/  
+}
 
 /* @end --preface */
 
@@ -234,21 +250,35 @@ div.region-content-inner {
 /* @group --footer */
 /* TODO: pre-process lists to add classes to ul instead: "links inline clearfix" */
 #section-footer ul.menu li,
-#section-footer ul.language-switcher-locale-url li,
 #zone-user ul.menu li {
   display:inline;
-  margin-right:0.5em;
 }
-
+#section-footer, #section-footer div, #section-footer p {
+  color: #fff;
+}
 #section-footer {
   background: #333;
   padding: 20px 0 50px;
-  color:#fff;
   min-height:200px;
 }
-#section-footer a, #section-footer a:link { color:#fff; }
+#section-footer a, #section-footer a:link { 
+  color:#fff;
+  text-shadow:0px 1px 1px #000;
+  text-decoration:none;
+}
+#section-footer a:hover { color:#ccc; }
 
+#block-menu-menu-footer-links {  margin-top: 20px; }
 #block-menu-menu-footer-links ul { text-align:right;}
+#block-menu-menu-footer-links ul.menu li.last { margin: 0; }
+
+
+#block-locale-language ul.language-switcher-locale-url li {
+  display:inline;
+  margin-right:1em;
+}
+#block-locale-language a { text-decoration:none; }
+#block-locale-language img.language-icon { vertical-align: baseline; }
 
 #section-footer #block-locale-language { }
 
@@ -274,7 +304,8 @@ aside .block {
 aside .block .block-inner {
   padding:25px 20px;
 }
-aside .block h2 {
+aside .block h2,
+.block h2.block-title {
   border-bottom: 1px solid #D6D6D6;
   font-size:1.5em;
   line-height: 1.2em;
@@ -282,6 +313,7 @@ aside .block h2 {
   margin: 0 0 1em;
   padding-bottom:5px;
   text-shadow:#FFFFFF 0 1px 0;
+  letter-spacing:.05em;
 }
 .block ul {
   margin-bottom:10px;
@@ -314,7 +346,8 @@ aside .block h2 {
   margin-left:0;
 }
 .block-views .item.event h3.title,
-.block-views .item.event p.teaser {
+.block-views .item.event p.teaser,
+.block-views .item.event .views-field {
   margin-left:65px;
 }
 
@@ -446,7 +479,8 @@ aside .block h2 {
 
 
 /* temp - ad blocks */
-aside #block-block-2.block {
+aside #block-block-2.block,
+.block-openx {
   padding:0px;
   border: 0px solid #D6D6D6;
   background:none;
@@ -468,10 +502,32 @@ aside #block-block-2.block {
   margin-bottom: 20px;
   border-bottom:1px dotted #ccc;
 }
-
-article .field-name-field-image {
-  margin: 10px 0 20px;
+.node-list article,
+.node-list .item {
+  margin-bottom: 20px;
+  border-bottom:1px dotted #ccc;
 }
+
+
+
+.page-node article .field-type-image {
+  margin: 10px -12px 10px 0; /*10px 0 20px*/
+}
+.node-list .node .field-type-image {
+	float:left;
+}
+
+/* @group CiviCRM */
+
+#block-block-17 {
+  border:none;
+}
+
+
+/* @end */
+
+
+
 
 
 
@@ -484,25 +540,48 @@ body.admin-menu div#admin-toolbar.vertical {
 
 
 /* */
+h3.node-section {
+  border-top: 1px dotted #ccc;
+  margin-top: 1em;
+  padding-top: 0.25em;
+  font-size: 1.8em;
+  width:100%;
+  text-transform:lowercase;
+}
+h4.node-subsection {
+  border-top: 1px dotted #ccc;
+  margin-top:1em;
+  padding-top:0.2em;
+  font-size: 1.4em;
+  width:100%;
+}
 
-.node div.img-left {
+.node-list .node .field-type-image a,
+div.img-left {
   float:left;
   margin: 5px 15px 15px 0;
 }
-.node div.img-right{
+div.img-right {
   float:right;
   margin: 5px 0 15px 15px;
 }
-
-.node div.img-left a,
-.node div.img-right a {
+.node-list .node .field-type-image a,
+div.img-left a,
+div.img-right a {
   display:block;
   padding:5px;
   border:1px solid #ccc;
   line-height:1em;
 }
-.node div.img-left a:hover,
-.node div.img-right a:hover {
-  background:#CCEE00;
+.node-list .node .field-type-image a:hover,
+div.img-left a:hover,
+div.img-right a:hover {
+  background:#bffe8d;
   border:1px solid #ccc;
 }
+
+/* @group CiviCRM */
+#crm-container label{
+  margin: 0 10px 0 5px;
+}
+/* @end CiviCRM */

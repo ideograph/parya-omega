@@ -1,0 +1,164 @@
+body {
+  font: 13px/1.5 'Droid Serif', Georgia, 'Times New Roman', serif;
+	font-style: normal; font-weight: normal; }
+	
+h1, h2, h3, h4, h5, h6,
+ul.ui-tabs-nav { 
+	font-family: 'PT Sans'; font-style: normal; font-weight: bold;
+	letter-spacing:.025em;
+}
+
+p, div {
+   font-family: 'Droid Serif'; font-style: normal; font-weight: normal;
+   color:#333;
+}
+
+
+a:link, a:visited {
+  color: #3b88c6;
+  text-decoration: underline;
+}
+
+a:hover, a:active {
+  color: #202124;
+  text-decoration: none;
+}
+
+a:active {
+  color: #295b86;
+}
+
+hr {
+  margin: 0;  padding: 0;
+  border: none;
+  height: 1px;
+  background: #295b86;
+}
+
+/*
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  /*letter-spacing: -0.05em;*/
+  font-family: 'PT Sans', Verdana, Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+}
+
+h1 {
+  font-size: 36px;
+}
+.node-type-page h1#page-title {
+  color:#23b990;
+  font-family: 'PT Sans Narrow', Verdana, Helvetica, Arial, sans-serif;
+  font-size: 44px;
+  letter-spacing: 0;
+}
+h2 {
+  font-size: 28px;
+  line-height:1.2em;
+}
+
+/* Make site titles the same size if it's an H1 (home) or H2 (internal) */
+h1.site-name,
+h2.site-name {
+  font-size: 36px;
+}
+
+/* Make it a bit smaller for block headers */
+h2.block-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;	
+}
+
+h2.node-title {
+  font-size: 28px;
+  line-height:1.1em;
+  letter-spacing: 0.05em;
+}
+h2.title a,
+h2.node-title a {
+  text-decoration: none;
+  border-bottom: 1px dotted #ccc;
+}
+h2.title a:hover,
+h2.node-title a:hover {
+  border-bottom: 1px dotted #295b86; /*202124*/
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+
+/* lists */
+ul          { list-style-type: square; }
+ul ul       { list-style-type: circle; }
+ul ul ul    { list-style-type: square; }
+ul ul ul ul { list-style-type: circle; }
+ol          { list-style-type: decimal; }
+ol ol       { list-style-type: lower-alpha; }
+ol ol ol    { list-style-type: decimal; }
+
+
+/* standardize list item indentation */
+/*ul, ol {
+  margin-left: 0;
+  padding-left: 2em;
+}*/
+/*ul ul,
+ol ol {
+  padding-top: 0.5em;
+}*/
+
+.node ol,
+.node ul {
+  margin-left: 0;
+  padding-left: 2.2em;
+}
+/*.block .content ol, 
+.block .content ul {
+	padding-left: 1em;
+}*/
+.node ul.inline,
+.node ol.inline {
+  padding-left: 0;
+}
+
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol,
+ul, pre, table, address, fieldset {
+  margin-bottom: 10px;
+}
+
+dt, .admin h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+dd {
+  padding-left: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+
+.ui-widget-content {
+    color: #333;
+}
+.ui-widget {
+    font-size: 1.1em;
+}
+

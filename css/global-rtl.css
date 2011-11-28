@@ -5,13 +5,18 @@
   margin-right:10px;
 }
 .grid-9.region-branding-ad { margin-right:0; }
-
-
-
-/* standardize list item indentation */
-.content ul, .content ol {
-  padding-right: 2em; /* RTL */
+.block-user-menu ul.menu {
+  text-align: left;
 }
+
+.node ol,
+.node ul,
+#zone-postscript .block .content ul {
+  margin-left: 0;
+  padding-left: 0;/* RTL */
+  padding-right: 2.2em;/* RTL */
+}
+
 .content dd {
   margin: 0 2em 0 0;/* RTL */
 }
@@ -22,3 +27,32 @@
 /* TEMP ads*/
 
 /* .block-6 {float:left;} */
+
+
+
+.sf-shadow ul {
+/*  padding: 0 0 9px 8px;*/
+}
+
+#block-block-15 img,
+#block-search-form {
+  float: left;
+}
+.block-user-menu ul.menu li.last { margin-left: 0; }
+.block-user-menu ul.menu {
+  padding-left:0;
+}
+#block-menu-menu-footer-links ul {
+    text-align: left;
+    padding-left:0;
+}
+
+#block-locale-language ul.language-switcher-locale-url li {
+    margin: 0 0 0 1em;
+    float: left;
+}
+.block-user-menu ul.menu li { margin: 0 0 0 1em;}
+
+#block-locale-language li.fa {
+  /*font-size:175%;*/
+}

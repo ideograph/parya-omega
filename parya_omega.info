@@ -64,12 +64,11 @@ zones[postfooter] = Post-footer
 
 css[global.css][name] = Parya's custom global styles
 css[global.css][description] = This file holds all the globally active custom CSS of our theme.
-css[global.css][options][weight] = 10
+css[global.css][options][weight] = 9
 
-
-css[fonts.css][name] = font styles
-css[fonts.css][description] = font styles
-css[fonts.css][options][weight] = 10
+css[typography.css][name] = Typography
+css[typography.css][description] = font styles and spacing
+css[typography.css][options][weight] = 9
 
 
 

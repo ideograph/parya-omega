@@ -6,20 +6,21 @@
  * We need to override some specifics, and include some layout-like elements
  * without loading up the whole stylesheet.
  */
- 
- 
 
-body {  
-  /* reset font size and line height */
-  /*font-size: 0.75em; /* 16px x .75 = 12px */
-  /*line-height: 1.333em; /* 12px x 1.333 = 16px */
 
+body.cke_show_borders,
+body.mceContentBody {
+  font-size: 1em; /* reset font size */
+  
+   /* just in case the theme sets a background on the body tag */
+  background: none #FFF;
+  
+  margin: 10px; /* add a bit of spacing so we aren't right to the edge */
 }
 
 
- /*
- * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
- */
+
+/* better safe than sorry */
 .clearfix:after {
   content: ".";
   display: block;
