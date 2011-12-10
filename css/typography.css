@@ -1,16 +1,48 @@
 body {
-  font: 13px/1.5 'Droid Serif', Georgia, 'Times New Roman', serif;
-	font-style: normal; font-weight: normal; }
+  font-size: 13px;
+  line-height:1.5;
+  font-family:'Droid Serif', Georgia, 'Times New Roman', serif;
+  font-style: normal; font-weight: normal; 
+}
 	
 h1, h2, h3, h4, h5, h6,
-ul.ui-tabs-nav { 
+ul.ui-tabs-nav,
+.main-menu,
+.block-user-menu { 
 	font-family: 'PT Sans'; font-style: normal; font-weight: bold;
 	letter-spacing:.025em;
 }
+.main-menu li li,
+.breadcrumb,
+.block-menu-block ul,
+.tabs  { 
+  font-family: 'PT Sans Narrow'; font-style: normal; font-weight: normal; 
+	/*letter-spacing:.025em;*/
+}
+.tabs {
+  font-size:18px;
+}
+.page-events .tabs {
+  font-size: 24px;
+  margin: 20px 0 15px;
+}
+.tabs ul.primary {
+  line-height: 1.2em;
+}
 
-p, div {
+.main-menu li li,
+.block-menu-block ul {
+  font-size:125%;
+}
+.main-menu li li li {
+  font-size:1em;
+  font-size:100%;
+}
+
+p, div,
+ {
    font-family: 'Droid Serif'; font-style: normal; font-weight: normal;
-   color:#333;
+   /*color:#333;*/
 }
 
 
@@ -47,7 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 36px;
 }
-.node-type-page h1#page-title {
+.node-type-page h1#page-title,
+.page-news h1#page-title {
   color:#23b990;
   font-family: 'PT Sans Narrow', Verdana, Helvetica, Arial, sans-serif;
   font-size: 44px;
@@ -122,8 +155,8 @@ ol ol {
   padding-top: 0.5em;
 }*/
 
-.node ol,
-.node ul {
+.node ol, .node ul,
+.content ul, .content ol {
   margin-left: 0;
   padding-left: 2.2em;
 }
@@ -161,4 +194,6 @@ dd {
 .ui-widget {
     font-size: 1.1em;
 }
-
+.main-menu {
+  
+}
