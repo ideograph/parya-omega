@@ -195,12 +195,12 @@ div.region-content-inner {
 }
 .sf-menu.sf-style-white li.sf-depth-1 {
   background: none;
-  font-size: 20px;
+  font-size: 21px;
   text-shadow:0 0px 5px #fff, 0 0px 4px #fff, 0 0px 3px #fff;
 
 }
 .sf-menu.sf-style-white li.sf-depth-2 {
-  font-size: 14px;
+  font-size: 16px;
   text-shadow:0px 1px 1px #fff;
 }
 .sf-menu.sf-style-white li.sf-depth-1 a {
@@ -278,7 +278,7 @@ div.region-content-inner {
 }
 .front #zone-preface .region {
   padding:10px 0 0;
-  z-index: 3333333;
+  z-index: 33333;
 }
 
 /* social media icons */
@@ -489,6 +489,7 @@ aside .block h2,
   margin:0 20px 5px 30px;
   float: left;
   width:130px;
+  color: #000;
 }
 .front #block-views-recent-headlines-block .content {
   display: block;
@@ -500,10 +501,10 @@ aside .block h2,
   /*margin-top:-80px;*/
  	position: absolute;
 	top: 0;
-	left: 0;
+	left: 20px;
 	height: 370px; /* 100% */
 	width: 900px; /* 100% */
-	z-index: 10;
+	z-index: 100;
 	filter:alpha(opacity:80); /* Specify opacity for IE */
 }
 

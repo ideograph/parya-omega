@@ -39,8 +39,7 @@ ul.ui-tabs-nav,
   font-size:100%;
 }
 
-p, div,
- {
+p, div {
    font-family: 'Droid Serif'; font-style: normal; font-weight: normal;
    /*color:#333;*/
 }
@@ -52,7 +51,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  color: #202124;
+  color: #666;
   text-decoration: none;
 }
 
@@ -79,16 +78,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 36px;
 }
+h1#page-title,
 .node-type-page h1#page-title,
 .page-news h1#page-title {
   color:#23b990;
   font-family: 'PT Sans Narrow', Verdana, Helvetica, Arial, sans-serif;
   font-size: 44px;
   letter-spacing: 0;
+  margin-bottom:30px;
 }
 h2 {
   font-size: 28px;
   line-height:1.2em;
+}
+.front h2.block-title {
+  color:#23b990;
 }
 
 /* Make site titles the same size if it's an H1 (home) or H2 (internal) */
