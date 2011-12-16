@@ -173,8 +173,9 @@ tr.odd {
 }
 
 #breadcrumb { margin: 10px 10px 20px;}
-div.breadcrumb,
-div.region-content-inner {
+
+/*div.region-content-inner*/
+div.breadcrumb {
   margin: 0 10px;
   font-size:130%;
 }
