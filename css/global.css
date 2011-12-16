@@ -604,7 +604,9 @@ aside #block-block-2.block,
   border-bottom:1px dotted #ccc;
 }
 
-
+.node nav.links  {
+  margin-top:2em;
+}
 
 .page-node article .field-type-image {
   margin: 10px -12px 10px 0; /*10px 0 20px*/
@@ -612,6 +614,8 @@ aside #block-block-2.block,
 .node-list .node .field-type-image {
 	float:left;
 }
+
+
 
 /* @group CiviCRM */
 
@@ -680,4 +684,16 @@ div.img-right a:hover {
 #crm-container label{
   margin: 0 10px 0 5px;
 }
+
+#crm-container .crm-section .content, .crm-section .content {
+    margin-left: 23%;
+}
+#crm-container .crm-section .label, .crm-section .label {
+    width: 20%;
+}
+.context-civicrm .ui-icon-print {
+  background: url(/sites/all/modules/contrib/print/icons/print_icon.gif) 0 0 no-repeat;
+}
+
+
 /* @end CiviCRM */
