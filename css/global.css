@@ -100,6 +100,15 @@ tr.odd {
 }
 
 
+/*override omega*/
+tr:hover td,
+tr.even:hover td.active,
+tr.odd:hover td.active {
+  background: #FFF;
+}
+
+
+
 /* @end Tables*/
 
 
@@ -309,6 +318,14 @@ div.breadcrumb {
 	box-shadow:0 12px 13px #000000;
 	padding:36px 0 20px;
 }
+.node .content fieldset.group-multimedia {
+  margin: 30px 0 20px;
+}
+.node .content fieldset legend {
+  font-size: 18px;
+  padding-bottom: 16px;
+
+}
 
 /* @end --preface */
 
@@ -382,8 +399,7 @@ div.breadcrumb {
 
 
 
-/* @group BLOCKS
-*********************************************/
+/* @group BLOCKS *********************************************/
 
 aside .block {
   margin-bottom:20px;
@@ -405,9 +421,10 @@ aside .block h2,
   letter-spacing:.05em;
 }
 .block ul {
-  margin-bottom:10px;
+  /*margin-bottom:10px;*/
+  padding-left: 1.25em;
 }
-
+.block ul.menu {}
 
 
 /* quicktabs */
@@ -592,16 +609,20 @@ aside #block-block-2.block,
 
 
 
-/* VIEWS lists */
-
+/* @group Views Lists */
 .node-list article {
   margin-bottom: 20px;
   border-bottom:1px dotted #ccc;
 }
 .node-list article,
-.node-list .item {
+.node-list .item,
+.node-list .view-display-id-news_first {
   margin-bottom: 20px;
-  border-bottom:1px dotted #ccc;
+  border-bottom:1px solid #ccc;
+}
+
+.node-list .view-display-id-news_first div.teaser {
+  margin-bottom: 20px;
 }
 
 .node nav.links  {
@@ -609,22 +630,27 @@ aside #block-block-2.block,
 }
 
 .page-node article .field-type-image {
-  margin: 10px -12px 10px 0; /*10px 0 20px*/
+  margin: 10px -12px 10px 0;
 }
 .node-list .node .field-type-image {
 	float:left;
 }
 
+/* photo galleies */
+.page-media-galleries .view-parya-galleries ul {
+  padding: 0; 
+ }
+.page-media-galleries .view-parya-galleries ul li {
+  list-style-type:none;
+}
 
-
-/* @group CiviCRM */
-
-#block-block-17 {
-  border:none;
+.page-media-galleries .view-parya-galleries div.img a {
+	width: 160px;
 }
 
 
-/* @end */
+
+/* @end Views Lists */
 
 
 
@@ -666,21 +692,39 @@ div.img-right {
   margin: 5px 0 15px 15px;
 }
 .node-list .node .field-type-image a,
+div.img a,
 div.img-left a,
-div.img-right a {
+div.img-right a,
+.field-slideshow a,
+.field-slideshow-pager a {
   display:block;
   padding:5px;
   border:1px solid #ccc;
   line-height:1em;
 }
 .node-list .node .field-type-image a:hover,
+div.img a:hover,
 div.img-left a:hover,
-div.img-right a:hover {
+div.img-right a:hover,
+.field-slideshow a:hover,
+.field-slideshow-pager a:hover {
   background:#bffe8d;
   border:1px solid #ccc;
 }
 
+.field-slideshow-pager a {
+  padding:2px;
+}
+.field-slideshow-caption {
+  padding-top: 10px;
+}
+
+
 /* @group CiviCRM */
+#block-block-17 {
+  border:none;
+}
+
 #crm-container label{
   margin: 0 10px 0 5px;
 }

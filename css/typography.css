@@ -31,9 +31,14 @@ ul.ui-tabs-nav,
 }
 
 .main-menu li li,
-.block-menu-block ul {
+.block-menu-block a {
+  /*font-size:125%;*/
+}
+
+.block-menu-block a {
   font-size:125%;
 }
+
 .main-menu li li li {
   font-size:1em;
   font-size:100%;
@@ -173,6 +178,13 @@ ol ol {
   padding-left: 0;
 }
 
+
+.content ul {
+  margin-bottom: 2em;
+}
+.content ul ul {
+  margin-bottom:0;
+}
 
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol,
 ul, pre, table, address, fieldset {
