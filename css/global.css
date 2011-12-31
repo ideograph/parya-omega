@@ -739,5 +739,8 @@ div.img-right a:hover,
   background: url(/sites/all/modules/contrib/print/icons/print_icon.gif) 0 0 no-repeat;
 }
 
+.page-civicrm-event-register .crm-button_qf_Participant_1_next_skip {
+  visibility:hidden;
+}
 
 /* @end CiviCRM */
