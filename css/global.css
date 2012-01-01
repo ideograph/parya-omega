@@ -739,7 +739,16 @@ div.img-right a:hover,
   background: url(/sites/all/modules/contrib/print/icons/print_icon.gif) 0 0 no-repeat;
 }
 
-.page-civicrm-event-register .crm-button_qf_Participant_1_next_skip {
+.page-civicrm-event-register .crm-button_qf_Participant_1_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_2_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_3_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_4_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_5_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_6_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_7_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_8_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_9_next_skip,
+.page-civicrm-event-register .crm-button_qf_Participant_10_next_skip {
   visibility:hidden;
 }
 
