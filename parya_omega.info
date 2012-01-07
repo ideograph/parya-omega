@@ -70,8 +70,8 @@ css[typography.css][name] = Typography
 css[typography.css][description] = font styles and spacing
 css[typography.css][options][weight] = 9
 
+[lt IE 8][all][] = css/ie8.css
 
-[lt IE 8][all][] = ie8.css
 
 ; EXCLUDE some sheets from contrib modules. [AM]
 

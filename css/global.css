@@ -318,6 +318,10 @@ div.breadcrumb {
 	box-shadow:0 12px 13px #000000;
 	padding:36px 0 20px;
 }
+.front #zone-header, .front #zone-preface, .front #zone-postscript, .front #zone-secondpostscript {
+	box-shadow:0 12px 13px #000000;
+}
+
 .node .content fieldset.group-multimedia {
   margin: 30px 0 20px;
 }
